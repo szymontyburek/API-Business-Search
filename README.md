@@ -1,6 +1,6 @@
 # Yelp-API-Search
 
-Code that uses the Yelp REST API to help connect consumers and great local businesses.
+Code that can search and display information about businesses assuming the consumer provides proper information, which includes but is not limited to; name, city, business id, or phone number. 
 
 Want to see the program run without cloning the repository? Watch the video below.
 
