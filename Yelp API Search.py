@@ -82,7 +82,7 @@ while True:
                 counter += 1
        #KeyError is thrown if there aren't enough reviews, so have an error message ready in case this happens
         except KeyError:
-            print("\nThis business doesn't have enough reviews. Please try another one.")
+            print("\nError. Could not retrieve reviews. Please try another business.")
     #8mlpC1pRQpmCH3S5z6rzSg
 
     #phone search
@@ -97,7 +97,7 @@ while True:
                 r = requests.get(url, params=params, headers=headers)
                 #if status_code == 200, break. Else, continue the loop until a valid phone number is entered
                 if(r.status_code != 200):
-                    print("\nError. Could not retriew reviews. Please try again")
+                    print("\nPhone number is invalid, or the business does not have any reviews. Please try again")
                     continue
                 else:
                     break
