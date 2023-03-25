@@ -71,14 +71,18 @@ while True:
                 break
         reviews = r.json()
         #print the three reviews that the api provides
-        reviews = reviews["reviews"]
-        counter = 1
-        print("\nHere are the 3 most recent reviews for this business:")
-        for review in reviews:
-            print("\nReview #" + str(counter) + ": ")
-            print("\n-Rating: " + str(review["rating"]))
-            print("-Comment: " +  review["text"] + "\n")
-            counter += 1
+        try:
+            reviews = reviews["reviews"]
+            counter = 1
+            print("\nHere are the 3 most recent reviews for this business:")
+            for review in reviews:
+                print("\nReview #" + str(counter) + ": ")
+                print("\n-Rating: " + str(review["rating"]))
+                print("\n-Comment: " +  review["text"] + "\n")
+                counter += 1
+       #KeyError is thrown if there aren't enough reviews, so have an error message ready in case this happens
+        except KeyError:
+            print("\nThis business doesn't have enough reviews. Please try another one.")
     #8mlpC1pRQpmCH3S5z6rzSg
 
     #phone search
@@ -93,7 +97,7 @@ while True:
                 r = requests.get(url, params=params, headers=headers)
                 #if status_code == 200, break. Else, continue the loop until a valid phone number is entered
                 if(r.status_code != 200):
-                    print("\nPhone number is invalid, or the business does not have any reviews. Please try again")
+                    print("\nError. Could not retriew reviews. Please try again")
                     continue
                 else:
                     break
@@ -134,9 +138,9 @@ while True:
                         print("\nName: " + detail["name"])
                         print("\nPrice: " + detail["price"])
                         print("\nRating: " + str(detail["rating"]) + "(" + str(detail["review_count"]) + " reviews)")
-                        print("\# NOTE: City: " + detail["location"]["city"] + " " + detail["location"]["state"])
+                        print("\nCity: " + detail["location"]["city"] + " " + detail["location"]["state"])
                         #every time i enter a valid phone number, the first address is readible and legible, but anything beyond that is always funky. So that's why I'm only print address1
-                        print("\nLocation: " + detail["location"]["address1"])
+                        print("\nAddress: " + detail["location"]["address1"])
                 except TypeError:
                     pass
                 else:
