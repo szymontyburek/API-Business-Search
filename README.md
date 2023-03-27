@@ -4,11 +4,13 @@ This project can search and display information about businesses assuming the co
 
 Want to see the program run without cloning the repository? Watch the video below.
 
-NOTE: TURN VOLUME ON, it is a vocal and visual demonstration.
+**_Note: Turn volume on_**, it is a vocal and visual demonstration.
 
 LIVE DEMO LINK HERE
 
-PROJECT DIFFICULTIES:
+## Difficulties encountered and their solutions below
+
+### Project Difficulties
 
 ValueError message appeared if the consumer entered incorrect information(Ex: letters when numbers are expected)
 
@@ -16,7 +18,7 @@ Requesting information from the API and executing code based on the response
 
 Deciphering the wanted information from the JSON object after requests were accepted
 
-SOLUTIONS:
+### Solutions:
 
 Using try/except block to show an error message that I wrote
 
