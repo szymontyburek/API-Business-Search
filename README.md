@@ -20,7 +20,7 @@ LIVE DEMO LINK HERE
 
 ### Solutions:
 
-1) Using try/except block to show an error message that I wrote
+1) Using try/except blocks to show an error messages that I wrote
 
 2) Researching the API reference page on Yelp’s developer portal to understand their status codes
 
