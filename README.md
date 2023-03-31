@@ -6,7 +6,7 @@ Want to see the program run without cloning the repository? Watch the video belo
 
 **_Note: Turn volume on_**, it is a vocal and visual demonstration.
 
-Video Link: https://drive.google.com/file/d/1WRSJs5tolbJ3ibjORpi_-MV9y0vzXp96/view?usp=sharing
+Live Project: https://drive.google.com/file/d/1WRSJs5tolbJ3ibjORpi_-MV9y0vzXp96/view?usp=sharing
 
 ## Difficulties encountered and their solutions below
 
